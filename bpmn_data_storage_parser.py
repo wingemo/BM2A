@@ -21,6 +21,8 @@ verb_to_operation = {
 # List to store extracted data storage references and their operations
 data_storage_references = []
 
+data_objects = {}
+
 # Loop through BPMN activities and extract data storage references
 for data_object_reference in root.findall('.//bpmn:dataObjectReference', namespace):
     name = data_object_reference.get('name')
@@ -36,6 +38,10 @@ for reference in data_storage_references:
     for verb, operation in verb_to_operation.items():
         if f'{{{verb}' in reference:
             data = reference.split('[', 1)[1].split(']', 1)[0]  # Extract data variables
+            if data not in data_objects:
+               data_objects[data] = dict()
+               data_objects[data][operation] = true
+            
             print(f"Data Storage Reference: {reference}")
             print(f"Operation: {operation}")
             print(f"Data: {data}")
