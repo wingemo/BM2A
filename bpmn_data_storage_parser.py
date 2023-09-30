@@ -10,6 +10,14 @@ root = tree.getroot()
 # Define the BPMN namespace
 namespace = {'bpmn': 'http://www.omg.org/spec/BPMN/20100524/MODEL'}
 
+# Mapping of BPMN verbs to operations
+verb_to_operation = {
+    'GET': 'RETRIEVE',
+    'POST': 'CREATE',
+    'PUT': 'UPDATE',
+    'DELETE': 'DELETE'
+}
+
 # List to store extracted data storage references and their operations
 data_storage_references = []
 
@@ -24,11 +32,11 @@ for data_object_reference in root.findall('.//bpmn:dataObjectReference', namespa
 
 # Loop through data storage references and extract operations
 for reference in data_storage_references:
-    # For example, if we are looking for {CREATE [NAME, ID, TIMESTAMP]}
-    if '{CREATE' in reference:
-        data = reference.split('[', 1)[1].split(']', 1)[0]  # Extract data variables
-        operation = 'CREATE'
-        print(f"Data Storage Reference: {reference}")
-        print(f"Operation: {operation}")
-        print(f"Data: {data}")
-        print("\n")
+    # Check if the reference contains one of the mapped operations
+    for verb, operation in verb_to_operation.items():
+        if f'{{{verb}' in reference:
+            data = reference.split('[', 1)[1].split(']', 1)[0]  # Extract data variables
+            print(f"Data Storage Reference: {reference}")
+            print(f"Operation: {operation}")
+            print(f"Data: {data}")
+            print("\n")
