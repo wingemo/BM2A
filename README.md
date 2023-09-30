@@ -15,7 +15,7 @@ In your BPMN model, these verbs serve as actions for your data storage reference
 
 For example:
 
-**DATA STORAGE REFERENCE:** {**CREATE** [NAME, ID, TIMESTAMP]}
+**DATA STORAGE REFERENCE:** {**CREATE** <PERSON> [NAME, ID, TIMESTAMP]}
 
 ## How it Works
 
