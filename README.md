@@ -1,7 +1,7 @@
 # BUSINESSMODEL2API
 
-These verbs are utilized as actions or tasks in your BPMN model to represent the different operations that must be performed within your process. These verbs will later be translated into API endpoints:
+In your BPMN model, these verbs serve as actions for your data storage references, symbolizing the diverse operations essential to your process. Subsequently, these verbs will be translated into corresponding API endpoints:
 GET -> RETRIEVE
 POST -> CREATE
 PUT -> UPDATE
-DELETE -> DELETE
+DELETE -> DELETE"
