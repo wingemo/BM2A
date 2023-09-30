@@ -1,14 +1,18 @@
-# BUSINESSMODEL2API
+# Business Model to API (BUSINESSMODEL2API)
 
-Within your BPMN model, these verbs represent actions related to your data storage references, symbolizing the various operations crucial to your process. Consequently, these verbs will be transformed into corresponding API endpoints as follows:
+## Overview
 
-GET -> RETRIEVE
-POST -> CREATE
-PUT -> UPDATE
-DELETE -> DELETE
+This project aims to bridge the gap between your BPMN (Business Process Model and Notation) model and API development. In this README, we'll outline the key concepts and how verbs in your BPMN model correspond to actions for data storage references, ultimately leading to the creation of API endpoints.
+
+## Verbs and Actions
+
+In your BPMN model, these verbs serve as actions for your data storage references, symbolizing the diverse operations essential to your process. Subsequently, these verbs will be translated into corresponding API endpoints:
+
+- **GET** -> **RETRIEVE**
+- **POST** -> **CREATE**
+- **PUT** -> **UPDATE**
+- **DELETE** -> **DELETE**
+
 For example:
 
-DATA STORAGE REFERENCE: {CREATE [NAME, ID, TIMESTAMP]}
-DATA STORAGE REFERENCE: {RETRIEVE [NAME, ID, TIMESTAMP]}
-DATA STORAGE REFERENCE: {UPDATE [NAME, ID, TIMESTAMP]}
-DATA STORAGE REFERENCE: {DELETE [NAME, ID, TIMESTAMP]}
+**DATA STORAGE REFERENCE:** {**CREATE** [NAME, ID, TIMESTAMP]}
