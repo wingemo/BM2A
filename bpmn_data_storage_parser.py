@@ -37,10 +37,13 @@ for reference in data_storage_references:
     # Check if the reference contains one of the mapped operations
     for verb, operation in verb_to_operation.items():
         if f'{{{verb}' in reference:
+            data_object = reference.split('<', 1)[1].split('>', 1)[0]  # Extract data variables
             data = reference.split('[', 1)[1].split(']', 1)[0]  # Extract data variables
-            if data not in data_objects:
-               data_objects[data] = dict()
-               data_objects[data][operation] = true
+            if data_object not in data_objects:
+               data_objects[data_object] = dict()
+            
+            data_objects[data_object]["data"] = data
+            data_objects[data_object]["operations"][operations] = true
             
             print(f"Data Storage Reference: {reference}")
             print(f"Operation: {operation}")
