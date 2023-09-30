@@ -69,4 +69,6 @@
     <bpmn2:dataObject id="DataObject_CreateOrder" name="DataObject_CreateOrder"/>
     <bpmn2:dataObject id="DataObject_UpdateOrder" name="DataObject_UpdateOrder"/>
     <bpmn2:dataObject id="DataObject_RetrieveOrder" name="DataObject_RetrieveOrder"/>
-    <bpmn2:dataObject id="DataObject_DeleteOrder" name="DataObject_DeleteOrder/>
+    <bpmn2:dataObject id="DataObject_DeleteOrder" name="DataObject_DeleteOrder"/>
+  </bpmn2:process>
+</bpmn2:definitions>
